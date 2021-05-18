@@ -25,13 +25,12 @@ class TestController
     {
         #we will use the http URL params with super _GLOBALS
             #and this is to handle possible undifined value
-            /**
-             * $age = 0;
-             * if(!empty($_GET['age'])){
-             * $age = $_GET['age'];
-             * }
-             */
-        
+            #####
+            # $age = 0;
+            # if(!empty($_GET['age'])){
+            # $age = $_GET['age'];
+            # }
+            #####    
         #how to manage HTTP request with symfony/http-foudations
             #==> $request = Request::createFromGlobals();
             #this line can be passed as and argument in the main function like done up
