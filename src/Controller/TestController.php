@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class TestController 
 {
@@ -16,6 +17,10 @@ class TestController
                 #die();
         dd("it's alive !");
     }
+    /**
+     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET", "POST"}, host="localhost", shemes={"http", "https"})
+     */
+
     public function test(Request $request, $age) : Response
     {
         #we will use the http URL params with super _GLOBALS
