@@ -8,6 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController 
 {
+    /**
+     * @Route("/", name="index", methods={"GET", "POST"}, host="localhost", schemes={"http", "https"})
+     */
     public function index() : Response
     {   
         #dump() replaces var_dump() :
@@ -18,7 +21,7 @@ class TestController
         dd("it's alive !");
     }
     /**
-     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET", "POST"}, host="localhost", shemes={"http", "https"})
+     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET", "POST"}, host="localhost", schemes={"http", "https"})
      */
 
     public function test(Request $request, $age) : Response
