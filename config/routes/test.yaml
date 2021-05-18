@@ -1,0 +1,20 @@
+test:
+   path: /test/{age<\d+>?0}
+   controller: App\Controller\TestController::test
+   #controling your methods over the route specific path
+   methods: [GET, POST]
+   #difine the hosting URL we can use you can define using subdomain too
+   # like that example: {subdomain}.thewebname.domain
+   host: localhost
+   schemes: [https, http]
+   #this can be directly replaced in the path parrams declaration like up {age? default_value}
+   #defaults:
+   #   age: 0
+   #########################
+   #we can refactor this requirement using the <> expression inside the path parameter like up
+   # {age< condition regex here >}
+   #requirements:
+   #   age: \d+
+   #### TIP #####
+   # you can use the long expressions in big projects to be more readable if you like
+   ####
